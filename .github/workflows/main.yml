@@ -50,10 +50,12 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   
   trufflehogSensitiveScan:
-    name: trufflehog
+    name: trufflehog Cred Checker
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: trufflehog-actions-scan
-        uses: edplato/trufflehog-actions-scan@master
+      - name: Haydn trufflehog-actions-scan
+        uses: haydz/trufflehog-actions-scan@master
+  
+  
 
