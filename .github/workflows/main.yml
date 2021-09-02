@@ -55,7 +55,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: edplato trufflehog-actions-scan
-        uses: edplato/trufflehog-actions-scan@master
+        uses: haydz/trufflehog-actions-scan@master
         with:
           scanArguments: "--regex --entropy=False --max_depth=5 --rules /regexes.json"
         
