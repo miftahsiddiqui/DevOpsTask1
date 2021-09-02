@@ -56,8 +56,7 @@ jobs:
       - uses: actions/checkout@master
       - name: Haydn trufflehog-actions-scan
         uses: haydz/trufflehog-actions-scan@master
-        with:
-           branch: ${{ github.ref }}
+        
   
   
 
