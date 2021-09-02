@@ -57,7 +57,7 @@ jobs:
       - name: Haydn trufflehog-actions-scan
         uses: haydz/trufflehog-actions-scan@master
         with:
-           scanArguments: "--regex --max_depth=10  --rules /regexes.json"
+           branch: ${{ github.ref }}
   
   
 
