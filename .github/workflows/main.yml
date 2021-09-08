@@ -53,10 +53,13 @@ jobs:
     name: secret scans
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: UnicornGlobal/trufflehog-actions-scan@master
+      - uses: actions/checkout@master
+      - name: trufflehog-actions-scan
+        uses: edplato/trufflehog-actions-scan@master
         with:
-            branch: ${{ github.head_ref }}
+          scanArguments: "--regex --entropy=False --max_depth=5 --rules /regexes.json" # Add custom options here*
+
+
 
 
         
